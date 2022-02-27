@@ -1,0 +1,58 @@
+POST  http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "thanhthu123",
+    "password": "123456"
+}
+
+###
+POST  http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "quanghuywebdev",
+    "password": "1234"
+
+}
+
+###
+POST  http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGZhZGMwYjU5NjQzYzA1NjgzYWM1NWEiLCJpYXQiOjE2MjcwNTM2OTd9.IfCqAfNVTsHgsqoaj9aGWgek4ajEaKZjHd2RatS4p9s
+
+{  
+    "title": "React-js",
+    "description": "học về React và NODE",
+    "url": "w3school.com",
+    "status": "LEARNED"
+}
+     
+
+###
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGZhZGMwYjU5NjQzYzA1NjgzYWM1NWEiLCJpYXQiOjE2MjcwNTMwODR9.eRijpPz05eT0NYl7pDYlnwM4OiNPc5z1Fx9uWYMdOWM
+
+
+###
+PUT http://localhost:5000/api/posts/60fadc2b59643c05683ac55e
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGZhZGMwYjU5NjQzYzA1NjgzYWM1NWEiLCJpYXQiOjE2MjcwNTMwODR9.eRijpPz05eT0NYl7pDYlnwM4OiNPc5z1Fx9uWYMdOWM
+
+{
+    "title": "Vue",
+    "description": "VUEEEEEEEEEEEEEEEE",
+    "url": "https://vuejs.org",
+    "status": "LEARNING"
+
+}
+
+###
+DELETE http://localhost:5000/api/posts/60fade9059643c05683ac583
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGZhZGMwYjU5NjQzYzA1NjgzYWM1NWEiLCJpYXQiOjE2MjcwNTM2OTd9.IfCqAfNVTsHgsqoaj9aGWgek4ajEaKZjHd2RatS4p9s
+
+###
+GET http://localhost:5000/api/auth
+Content-Type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGViMGZiMGU4ODhmMTAzODgxZDExOTkiLCJpYXQiOjE2MjYxMDA5MDR9.jpp5dAwf-NCEl7NpjLpnZQmpev4mzZJIGd9dNJSCb54
